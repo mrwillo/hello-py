@@ -15,6 +15,6 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: false
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/py-test.latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/py-test:latest
       - name: Image digest
         run: echo ${{steps.docker_build.outputs.digest }}
